@@ -1,0 +1,4 @@
+
+
+docker run -ti **container_name** /bin/bash
+to get into the linux OS of the docker container
