@@ -4,15 +4,15 @@ the goal is to maximize episodic (per game session)  reward by learning policies
 
 steps to set up atari gym environment and dependencies :
 
-# build docker container
-1. docker build -f Dockerfile -t rl_container .
-# run docker container
-2. docker run -ti rl_container
-# activate conda environment with dependencies installed
-3. source activate rl
-# cd to working (code) dir
-4. cd src
-# setup atari ROMS (required to run atari environments-pong,breakout etc.)
+# 1. build docker container
+ docker build -f Dockerfile -t rl_container .
+# 2. run docker container
+ docker run -ti rl_container
+# 3. activate conda environment with dependencies installed
+ source activate rl
+# 4.cd to working (code) dir
+ cd src
+# 5.setup atari ROMS (required to run atari environments-pong,breakout etc.)
 5. python atari_ROMS_setup.py
 
 to run the experiments:
