@@ -8,10 +8,12 @@ steps to set up atari gym environment and dependencies :
 1. docker build -f Dockerfile -t rl_container .
 # run docker container
 2. docker run -ti rl_container
+# activate conda environment with dependencies installed
+3. source activate rl
 # cd to working (code) dir
-3. cd src
+4. cd src
 # setup atari ROMS (required to run atari environments-pong,breakout etc.)
-4. python atari_ROMS_setup.py
+5. python atari_ROMS_setup.py
 
 to run the experiments:
 # for vanilla policy gradient (REINFORCE) algorithm on atari pong
