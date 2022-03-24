@@ -105,7 +105,7 @@ class atari_VPG():
             for proc_frames_batch,act_inds,pi_targets in traj_dl:
                 out=self.pi_forward(proc_frames_batch)
                 try:
-                    policy_loss=(self.policy_loss(out,act_inds.to(self.device))*pi_targets.to(self.device)).mean()
+                    policy_loss=-(self.policy_loss(out,act_inds.to(self.device))*pi_targets.to(self.device)).mean()
                 ## to cover the case when dataloader returns single item-frames and actions
                 except:
                     policy_loss=-(self.policy_loss(out.unsqueeze(0),act_inds.to(self.device))*pi_targets.to(self.device)).mean()
