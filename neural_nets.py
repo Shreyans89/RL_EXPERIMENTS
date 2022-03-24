@@ -27,8 +27,8 @@ class pi_net(nn.Module):
         
         
 class Q_net(nn.Module):
-    """ Simple Convnet architecture replresents a policy network,i.e the probability of taking one of 4 actions (for breakout)
-    given a state (concatenation of 4 consecutive atari frames"""
+    """ Simple Convnet architecture replresents a Q network,i.e the state action value estimates wrt which the agent acts epsilon
+    greedily"""
     
     def __init__(self,n_actions=4,act=nn.ReLU(),kframes=4):
         super(Q_net, self).__init__()
